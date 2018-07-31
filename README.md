@@ -1,4 +1,4 @@
-# VoteReward
+# VoteReward <img src="https://github.com/KhoaGamingVN/VoteReward/raw/master/icon.png" align="left"> </img>
 ## The essential voting plugin for your server.
 
 ### About:
