@@ -65,7 +65,7 @@ class Main extends PluginBase {
     $this->debug = isset($config["Debug"]) && $config["Debug"] === true ? true : false;
   }
 
-  public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
+  public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
     switch(strtolower($command->getName())) {
       case "vote":
         if(isset($args[0]) && strtolower($args[0]) == "reload") {
@@ -97,7 +97,7 @@ class Main extends PluginBase {
           }
         }
         $query = new RequestThread(strtolower($sender->getName()), $requests);
-        $this->getServer()->getScheduler()->scheduleAsyncTask($query);
+        $this->getServer()->getAsyncPool()->submitTask($query);
         break;
       default:
         $sender->sendMessage("Invalid command.");
