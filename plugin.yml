@@ -1,7 +1,7 @@
 name: VoteReward
 main: LDX\VoteReward\Main
-version: 3.1.0
-api: [3.0.0]
+version: 3.1.1
+api: [3.1.0]
 author: LDX
 website: "http://votereward.mcpe.me"
 load: POSTWORLD
